@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "node-constellation": "^0.0.5"
+  }
+}
