@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "json-stringify-pretty-compact": "^1.0.4",
+    "receipt-lottery-taiwan": "^0.0.4"
+  }
+}
