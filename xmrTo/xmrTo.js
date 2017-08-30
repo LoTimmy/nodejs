@@ -8,8 +8,3 @@ xmrTo.getParams()
     log(params);
   });
 
-// xmrTo.createOrder(1, '1HvETudAiWi81HdvcwbSzrZmVfonejTtF8')
-//   .then(function(order) {
-//     console.log(order);
-//   });
-
