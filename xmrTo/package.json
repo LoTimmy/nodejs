@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "co": "^4.6.0",
+    "numeral": "^2.0.6",
     "xmrto-api": "^1.0.0"
   }
 }
