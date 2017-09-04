@@ -1,0 +1,11 @@
+{
+  "strict" : true,
+  "undef"   : true,
+  "validthis" : true,
+  "node"   : true,
+  "esversion" : 6,
+  "curly"  : true,
+  "laxcomma" : true,
+  "unused" : true
+}
+
