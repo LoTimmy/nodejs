@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-request": "^1.0.0",
+    "json-stringify-pretty-compact": "^1.0.4",
+    "query-string": "^5.0.0",
+    "url-join": "^2.0.2"
+  }
+}
