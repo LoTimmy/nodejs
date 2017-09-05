@@ -1,3 +1,4 @@
+"use strict";
 function* fibonacci() {
   var fn1 = 0;
   var fn2 = 1;
