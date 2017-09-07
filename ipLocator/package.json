@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "co": "^4.6.0",
+    "ip-locator": "^0.0.1",
+    "thunkify": "^2.1.2"
+  }
+}
