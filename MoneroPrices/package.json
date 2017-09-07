@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "monero-prices": "^1.0.0"
+  }
+}
