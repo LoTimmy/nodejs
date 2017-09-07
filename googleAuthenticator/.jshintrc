@@ -1,0 +1,10 @@
+{
+  "strict" : true,
+  "undef"   : true,
+  "validthis" : true,
+  "node"   : true,
+  "esversion" : 6,
+  "curly"  : true,
+  "unused" : true
+}
+
