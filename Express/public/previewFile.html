@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Hello, world!</h1>
+      <input type="file"><br>
+      <img src="" height="200" alt="Image preview...">
+    </div>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+      $( "input:file" ).change(function() {
+        var selectedFile = this.files[0];
+        previewFile(selectedFile);
+      });
+
+      function previewFile(file) {
+        var preview = $("img")[0];
+        // var preview = document.querySelector('img');
+
+        var reader = new FileReader();
+        reader.addEventListener("load", function () {
+          preview.src = reader.result;
+        }, false);
+
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>
+  </body>
+</html>
+
