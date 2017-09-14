@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, world!</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/datatables/media/css/dataTables.bootstrap.min.css">
+    <style>
+      body {
+        padding-top: 1rem;
+      }
+      button {
+        padding-bottom: 1rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <button type="button" class="btn btn-default navbar-btn">Button</button>
+
+      <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Extn.</th>
+            <th>Start date</th>
+            <th>Salary</th>
+          </tr>
+        </tfoot>
+      </table>
+
+      <pre style="display: none;"></pre>
+    </div>
+    <!-- /.container -->
+
+    <!-- Scripts -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/underscore/underscore-min.js"></script>
+    <script src="/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/bower_components/datatables/media/js/dataTables.bootstrap.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        var table = $("#example").DataTable({
+          processing: true,
+          columnDefs: [
+            {
+              targets: "_all",
+              visible: true,
+            }
+          ],
+          ajax: "data/arrays.txt"
+        });
+      
+        $("button").click(() => {
+          var data = table.data();
+      
+          var array = [];
+          _.each(data, (element, index) => (array[index] = element));
+          $("pre")
+            .html(JSON.stringify(array, null, "  "))
+            .show();
+      
+          return false;
+        });
+      });
+    </script>
+  </body>
+
+</html>
+

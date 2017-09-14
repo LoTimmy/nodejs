@@ -15,3 +15,4 @@ node_modules
 bower_components
 config.gypi
 *.orig
+access.log
