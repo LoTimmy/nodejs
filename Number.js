@@ -9,8 +9,8 @@ const smallestInt = -(Math.pow(2, 53) - 1);
 const biggestNum = Number.MAX_VALUE;
 const smallestNum = Number.MIN_VALUE;
 const infiniteNum = Number.POSITIVE_INFINITY;
-const negInfiniteNum = Number.NEGATIVE_INFINITY;
-const notANum = Number.NaN;
+// const negInfiniteNum = Number.NEGATIVE_INFINITY;
+// const notANum = Number.NaN;
 
 console.log(biggestInt);
 console.log(smallestInt);
