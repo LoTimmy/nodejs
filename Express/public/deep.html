@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/datatables/media/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/datatables-buttons/css/buttons.bootstrap.css">
   </head>
 
   <body>
@@ -23,6 +24,11 @@
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="/bower_components/datatables/media/js/dataTables.bootstrap.min.js"></script>
+    <script src="/bower_components/datatables-buttons/js/dataTables.buttons.js"></script>
+    <script src="/bower_components/datatables-buttons/js/buttons.bootstrap.js"></script>
+    <script src="/bower_components/datatables-buttons/js/buttons.html5.js"></script>
+    <script src="/bower_components/jszip/dist/jszip.min.js"></script>
+
     <script>
       $(document).ready(() => {
         var columnDefs = [
@@ -34,7 +40,9 @@
           { title: "Salary", targets: 5, visible: true }
         ];
         $("#example").DataTable({
+          dom: "Bfrtip",
           processing: true,
+          buttons: ["copy", "excel"],
           ajax: "data/objects_deep.txt",
           columnDefs: columnDefs,
           columns: [
