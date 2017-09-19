@@ -3,7 +3,7 @@ const xmr2btc = require('xmrto-api');
 const xmrTo = new xmr2btc();
 const log = console.log;
 
-var uuid = 'xmrto-nECMwB';
+var uuid = 'xmrto-fFh6yK';
 
 xmrTo.queryOrder(uuid)
   .then(function(order) {
