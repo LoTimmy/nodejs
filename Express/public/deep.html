@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello, world!</title>
 
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/datatables/media/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/datatables-buttons/css/buttons.bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/datatables/media/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/datatables-buttons/css/buttons.bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -42,7 +43,19 @@
         $("#example").DataTable({
           dom: "Bfrtip",
           processing: true,
-          buttons: ["copy", "excel"],
+          // buttons: ["copy", "excel"],
+          buttons: [
+            {
+              extend: "copyHtml5",
+              text: '<i class="fa fa-files-o"></i>',
+              titleAttr: "Copy"
+            },
+            {
+              extend: "excelHtml5",
+              text: '<i class="fa fa-file-excel-o"></i>',
+              titleAttr: "Excel"
+            }
+          ],
           ajax: "data/objects_deep.txt",
           columnDefs: columnDefs,
           columns: [

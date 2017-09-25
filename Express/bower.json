@@ -24,6 +24,8 @@
     "vue": "^2.4.2",
     "underscore": "^1.8.3",
     "datatables-buttons": "^1.4.2",
-    "jszip": "^3.1.4"
+    "jszip": "^3.1.4",
+    "js-xlsx": "^0.11.3",
+    "semantic": "semantic-ui#^2.2.13"
   }
 }

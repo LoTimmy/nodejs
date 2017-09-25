@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>Hello, world!</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="/bower_components/datatables-buttons/css/buttons.semanticui.css">
+    <link rel="stylesheet" href="/bower_components/datatables/media/css/dataTables.semanticui.min.css">
+
+    <style type="text/css">
+      body {
+        padding-top: 5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ui grid container">
+
+      <div class="row">
+        <div class="column">
+          <h1 class="ui header">Hello, world!</h1>
+          <div class="ui divider"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <table id="example" class="ui celled table" cellspacing="0" width="100%">
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="/bower_components/datatables/media/js/dataTables.semanticui.min.js"></script>
+    <script src="/bower_components/semantic/dist/semantic.min.js"></script>
+    <script src="/bower_components/datatables-buttons/js/dataTables.buttons.js"></script>
+    <script src="/bower_components/datatables-buttons/js/buttons.semanticui.js"></script>
+    <script src="/bower_components/datatables-buttons/js/buttons.html5.js"></script>
+    <script src="/bower_components/jszip/dist/jszip.min.js"></script>
+
+    <script>
+      $(document).ready(() => {
+        var columnDefs = [{
+          title: "Name",
+          targets: 0,
+          visible: true
+        }, {
+          title: "Position",
+          targets: 1,
+          visible: true
+        }, {
+          title: "Office",
+          targets: 2,
+          visible: true
+        }, {
+          title: "Extn.",
+          targets: 3,
+          visible: true
+        }, {
+          title: "Start date",
+          targets: 4,
+          visible: true
+        }, {
+          title: "Salary",
+          targets: 5,
+          visible: true
+        }];
+        $("#example").DataTable({
+          // dom: "Bfrtip",
+          // dom: "Blfrtip",
+          // searching: false,
+          searching: true,
+          processing: true,
+          // buttons: ["copy", "excel", "pageLength"],
+          ajax: "data/objects_deep.txt",
+          columnDefs: columnDefs,
+          columns: [
+          { data: "name" }, 
+          { data: "hr.position" }, 
+          { data: "contact.0" }, 
+          { data: "contact.1" }, 
+          { data: "hr.start_date" }, 
+          { data: "hr.salary" }]
+        });
+      });
+
+    </script>
+  </body>
+
+</html>
+
