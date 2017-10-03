@@ -43,11 +43,13 @@ co(function*() {
     ).format("0,0")}`
   );
 
+  let mymonero = 1.159864210797;
+
   log(
-    `0.657545525797 XMR = ${numeral(0.657545525797 * Kei5Ohph.price).format(
+    `${mymonero} XMR = ${numeral(mymonero * Kei5Ohph.price).format(
       "0,0.00000000"
     )} BTC = NT$${numeral(
-      0.657545525797 * Kei5Ohph.price * oonga9Oh.raw_sell_price / 1e5
+      mymonero * Kei5Ohph.price * oonga9Oh.raw_sell_price / 1e5
     ).format("0,0")}`
   );
 
