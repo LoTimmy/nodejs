@@ -1,0 +1,10 @@
+{
+  "name": "myapp",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "8.0.0"
+  }
+}
+
