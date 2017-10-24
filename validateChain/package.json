@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "validate-chain": "^1.1.1"
+  }
+}
