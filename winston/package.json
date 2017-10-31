@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "moment": "^2.19.1",
+    "moment-parseformat": "^2.2.1",
+    "winston": "^2.4.0"
+  }
+}
