@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"load-json-file": "^3.0.0"
+	}
+}
