@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "sort-keys": "^2.0.0"
+  }
+}
