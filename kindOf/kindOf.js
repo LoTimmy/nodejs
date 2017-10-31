@@ -1,0 +1,34 @@
+"use strict";
+const kindOf = require("kind-of");
+
+console.log(kindOf(undefined));
+console.log(kindOf(null));
+console.log(kindOf(true));
+console.log(kindOf(false));
+console.log(kindOf(new Buffer("")));
+
+console.log(kindOf(42));
+console.log(kindOf("str"));
+console.log(kindOf(arguments));
+console.log(kindOf({}));
+console.log(kindOf(Object.create(null)));
+console.log(kindOf(new Date()));
+console.log(kindOf([1, 2, 3]));
+console.log(kindOf(/foo/));
+console.log(kindOf(new RegExp("foo")));
+console.log(kindOf(function() {}));
+console.log(kindOf(function*() {}));
+console.log(kindOf(Symbol("str")));
+console.log(kindOf(new Map()));
+console.log(kindOf(new WeakMap()));
+console.log(kindOf(new Set()));
+console.log(kindOf(new WeakSet()));
+console.log(kindOf(new Int8Array()));
+console.log(kindOf(new Uint8Array()));
+console.log(kindOf(new Uint8ClampedArray()));
+console.log(kindOf(new Int16Array()));
+console.log(kindOf(new Uint16Array()));
+console.log(kindOf(new Int32Array()));
+console.log(kindOf(new Uint32Array()));
+console.log(kindOf(new Float32Array()));
+console.log(kindOf(new Float64Array()));
