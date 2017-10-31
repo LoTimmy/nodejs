@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "json-stringify-pretty-compact": "^1.0.4",
+    "query-string": "^5.0.0",
+    "superagent": "^3.6.0",
+    "url-join": "^2.0.2"
+  }
+}
