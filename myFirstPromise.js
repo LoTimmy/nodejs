@@ -7,7 +7,8 @@ let myFirstPromise = new Promise((resolve, reject) => {
 });
 */
 
-let myFirstPromise = new Promise((resolve, reject) =>
+// let myFirstPromise = new Promise((resolve, reject) =>
+let myFirstPromise = new Promise(resolve =>
   setTimeout(() => resolve("Success!"), 1000)
 );
 

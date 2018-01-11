@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jsome": "^2.3.26",
+    "random-user": "^2.0.2"
+  }
+}

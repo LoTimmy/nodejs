@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "alasql": "^0.4.4",
+    "jsome": "^2.3.26"
+  }
+}
